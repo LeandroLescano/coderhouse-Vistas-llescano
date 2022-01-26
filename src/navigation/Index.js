@@ -1,30 +1,54 @@
-import Categories from '../screens/Categories';
+import CartStackNavigation from './cart';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {NavigationContainer} from '@react-navigation/native';
-import ProductDetail from '../screens/ProductDetail';
-import Products from '../screens/Products';
+import Orders from '../screens/Orders';
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import ShopStackNavigation from './shop/Index';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
+const BottomTabs = createBottomTabNavigator();
 
-const Index = () => {
+const AppNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Categories"
-        screenOptions={{
-          animation: 'slide_from_right',
-        }}>
-        <Stack.Screen name="Categories" component={Categories} />
-        <Stack.Screen name="Products" component={Products} />
-        <Stack.Screen
-          name="ProductDetail"
-          options={{title: 'Details'}}
-          component={ProductDetail}
+      <BottomTabs.Navigator>
+        <BottomTabs.Screen
+          name="Shop"
+          options={{
+            tabBarLabel: 'Tienda',
+            headerShown: false,
+            tabBarLabelStyle: {
+              color: 'black',
+            },
+            tabBarIcon: ({focused}) => (
+              <Ionicons
+                name={focused ? 'ios-home' : 'home-outline'}
+                size={24}
+              />
+            ),
+          }}
+          component={ShopStackNavigation}
         />
-      </Stack.Navigator>
+        <BottomTabs.Screen
+          name="CartStack"
+          options={{
+            tabBarLabel: 'Carrito',
+            headerShown: false,
+            tabBarLabelStyle: {
+              color: 'black',
+            },
+            tabBarIcon: ({focused}) => (
+              <Ionicons
+                name={focused ? 'ios-cart' : 'cart-outline'}
+                size={24}
+              />
+            ),
+          }}
+          component={CartStackNavigation}
+        />
+      </BottomTabs.Navigator>
     </NavigationContainer>
   );
 };
 
-export default Index;
+export default AppNavigation;

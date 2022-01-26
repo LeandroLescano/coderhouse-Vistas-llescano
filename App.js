@@ -6,10 +6,10 @@
  * @flow strict-local
  */
 
-import Index from './src/navigation/Index';
+import AppNavigation from './src/navigation/Index';
 import React from 'react';
 
 const App = () => {
-  return <Index />;
+  return <AppNavigation />;
 };
 export default App;
