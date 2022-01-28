@@ -1,0 +1,77 @@
+export const PRODUCTS = [
+  {
+    id: '1',
+    category: '1',
+    name: 'Focaccia',
+    description:
+      'Focaccia is a flatbread made from a dough of flour, water, and yeast. It is usually made in a round, flat shape, and is usually served with a filling such as cheese, tomato, or meat. Focaccia is a traditional Italian flatbread, and is often eaten as a breakfast or lunch dish.',
+    weight: '350gr',
+    price: 1600,
+  },
+  {
+    id: '2',
+    category: '1',
+    name: 'Multi Grain',
+    description:
+      'Multi Grain is a flatbread made from a dough of flour, water, and yeast. It is usually made in a round, flat shape, and is usually served with a filling such as cheese, tomato, or meat. Multi Grain is a traditional Italian flatbread, and is often eaten as a breakfast or lunch dish.',
+    weight: '380gr',
+    price: 1800,
+  },
+  {
+    id: '3',
+    category: '1',
+    name: 'Baguette',
+    description:
+      'Baguette is a flatbread made from a dough of flour, water, and yeast. It is usually made in a round, flat shape, and is usually served with a filling such as cheese, tomato, or meat. Baguette is a traditional Italian flatbread, and is often eaten as a breakfast or lunch dish.',
+    weight: '250gr',
+    price: 1100,
+  },
+  {
+    id: '4',
+    category: '2',
+    name: 'Glazed',
+    description: 'Donut glazed with sugar',
+    weight: '250gr',
+    price: 1100,
+  },
+  {
+    id: '5',
+    category: '2',
+    name: 'Chocolate',
+    description: 'Donut glazed with chocolate sauce',
+    weight: '300gr',
+    price: 1900,
+  },
+  {
+    id: '6',
+    category: '2',
+    name: 'Strawberry',
+    description: 'Donut glazed with sugar flavoured with strawberry',
+    weight: '300gr',
+    price: 1500,
+  },
+  {
+    id: '7',
+    category: '3',
+    name: 'Apple Pie',
+    description: 'Apple pie with apple slices and cinnamon',
+    weight: '250gr',
+    price: 1100,
+  },
+  {
+    id: '8',
+    category: '3',
+    name: 'Cheese Cake',
+    description: 'Cheese cake with red fruit jam',
+    weight: '250gr',
+    price: 1200,
+  },
+  {
+    id: '9',
+    category: '3',
+    name: 'Tiramisu',
+    description: 'Tiramisu with biscuits vainilla',
+    weight: '250gr',
+    price: 1300,
+  },
+];

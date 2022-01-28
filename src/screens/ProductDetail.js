@@ -2,10 +2,10 @@ import {Image, Text, View} from 'react-native';
 
 import React from 'react';
 import productStyles from '../styles/ProductDetail.styles';
+import {useSelector} from 'react-redux';
 
-const ProductDetail = ({route}) => {
-  const product = route.params;
-
+const ProductDetail = () => {
+  const product = useSelector(state => state.products.selected);
   return (
     <View style={productStyles.container}>
       <Image
@@ -17,6 +17,7 @@ const ProductDetail = ({route}) => {
       />
       <View>
         <Text style={productStyles.title}>{product.name}</Text>
+        <Text style={productStyles.description}>{product.description}</Text>
         <Text style={productStyles.price}>$ {product.price}</Text>
       </View>
     </View>
