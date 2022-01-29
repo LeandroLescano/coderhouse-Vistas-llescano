@@ -15,6 +15,20 @@ export const styles = StyleSheet.create({
 
     elevation: 2,
   },
+  buttonPressed: {
+    backgroundColor: '#8c6a57',
+    padding: 5,
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
   buttonText: {
     color: '#ffe8d6',
     textTransform: 'uppercase',

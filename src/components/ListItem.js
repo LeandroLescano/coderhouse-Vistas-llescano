@@ -7,7 +7,9 @@ const ListItem = ({item, handlePress, buttonText}) => {
   return (
     <View style={styles.item}>
       <Text style={styles.itemTitle}>{item.name}</Text>
-      <Pressable style={styles.button} onPress={() => handlePress()}>
+      <Pressable
+        style={({pressed}) => (pressed ? styles.buttonPressed : styles.button)}
+        onPress={() => handlePress()}>
         <Text style={styles.buttonText}>{buttonText}</Text>
       </Pressable>
     </View>
